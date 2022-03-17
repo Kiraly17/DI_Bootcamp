@@ -1,0 +1,34 @@
+* {
+	box-sizing: border-box;
+}
+
+nav {
+	border: 2px solid black;
+	background-color: lightcoral;
+	position: relative;
+	padding: 10px;
+}
+#icon {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+}
+#list-links {
+	list-style: none;
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+#list-links li {
+}
+
+section {
+	border: 2px solid blue;
+}
+section div {
+	border: 2px solid red;
+	display: inline-block;
+	width: 33%;
+}

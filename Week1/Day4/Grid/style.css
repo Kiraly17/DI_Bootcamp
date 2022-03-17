@@ -1,0 +1,58 @@
+/*GENERAL CSS*/
+
+/* Everything on the page */
+* {
+    box-sizing: border-box;
+}
+
+section {
+    border: 5px solid black;
+    display: grid;
+    /*property that sets : 
+    * the number of rows
+    * the height of every row*/
+    grid-template-rows: 200px 200px;
+    /*property that sets: 
+    * the number of columns
+    * the width of every column*/
+    /*grid-template-columns: repeat(3,1fr);*/
+    grid-template-columns: repeat(2, 1fr 2fr);
+    /*1fr 2fr 1fr 2fr;*/
+    /*grid-template-columns : 2fr repeat(2,1fr);*/
+    grid-row-gap: 10px;
+    grid-column-gap: 20px;
+}
+
+div {
+    text-align: center;
+    color: black;
+    font-size: 30px;
+}
+
+.greenbox {
+    background-color: #a4e6a4;
+    grid-row: 1 / span 2;
+}
+
+.purplebox {
+    background-color: #ceaaf0;
+    grid-column: 2 / span 2;
+}
+
+.pinkbox {
+    background-color: #f288d5;
+    /*margin-left: 10px;*/
+}
+
+.bluebox {
+    background-color: #438eea;
+}
+
+.yellowbox {
+    background-color: #f4ed79;
+    /*margin-left: 10px;*/
+}
+
+.redbox {
+    background-color: #f8394f;
+}
