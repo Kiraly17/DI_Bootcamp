@@ -133,55 +133,62 @@ function changeEnough(itemPrice, amountOfChange) {
   return false;
 }
 
-// let c = changeEnough(4.25, [25, 20, 5, 0]);
-// console.log(c);
+let c = changeEnough(4.25, [25, 20, 5, 0]);
+console.log(c);
 
-// // Exercise 6 : Vacations Costs
-// function hotelCost(price) {
-//   let night = 0;
-//   do {
-//     night = Number(prompt("How many night would you like to stay?"));
-//   } while (isNaN(night) || night == "");
-//   return price * night;
-// }
-// let tot = hotelCost(140);
-// console.log(tot);
+// Exercise 6 : Vacations Costs
+function hotelCost(price) {
+  let night = 0;
+  do {
+    night = Number(prompt("How many night would you like to stay?"));
+  } while (isNaN(night) || night == "");
+  return price * night;
+}
+let tot = hotelCost(140);
+console.log(tot);
 
-// function planeRideCost() {
-//   let destination = prompt("What is your destination?");
+function planeRideCost() {
+  let destination = prompt("What is your destination?");
 
-//   while (
-//     typeof destination != "string" ||
-//     destination == "" ||
-//     !isNaN(destination)
-//   ) {
-//     destination = prompt("What is your destination?");
-//   }
-//   if (destination === "London") {
-//     console.log(`The price is 183`);
-//     return destination;
-//   } else if (destination === "Paris") {
-//     console.log(`The price is 220`);
-//     return destination;
-//   } else if (destination != "") {
-//     console.log(`The price is 300`);
-//     return destination;
-//   }
-// }
-// planeRideCost();
+  while (
+    typeof destination != "string" ||
+    destination == "" ||
+    !isNaN(destination)
+  ) {
+    destination = prompt("What is your destination?");
+  }
+  if (destination === "London") {
+    console.log(`183`);
+    return destination;
+  } else if (destination === "Paris") {
+    console.log(` 220`);
+    return destination;
+  } else if (destination != "") {
+    console.log(`300`);
+    return destination;
+  }
+}
+planeRideCost();
 
-// function rentalCarCost()
-//   let rent = 0;
-//   let days = 0;
-//   do {
-//     rent = Number(prompt("How many days would you like to rent?"));
-//   } while (isNaN(rent) || rent == "");
-//   if (rent <= 10) {
-//     days = 40;
-//   } else {
-//     days = 36;
-//   }
-//   return rent * days;
-// }
-// let finalP = rentalCarCost();
-// console.log(finalP);
+function rentalCarCost() {
+  let rent = 0;
+  let days = 0;
+  do {
+    rent = Number(prompt("How many days would you like to rent?"));
+  } while (isNaN(rent) || rent == "");
+  if (rent <= 10) {
+    days = 40;
+  } else {
+    days = 36;
+  }
+  return rent * days;
+}
+let finalP = rentalCarCost();
+console.log(finalP);
+
+function totalVacationCost(hotelCost, planeRideCost, rentalCarCost) {
+  totalCost = hotelCost + planeRideCost + rentalCarCost;
+  return totalCost;
+}
+let sumAll = totalVacationCost(tot, planeRideCost(), finalP);
+console.log(sumAll);
