@@ -47,22 +47,22 @@ infoAboutPerson("Josh", 26, "Yellow");
 
 // Call the calculateTip() function.
 
-// function calculateTip() {
-//   let tip = 0;
-//   let billPrice = Number(prompt("What is the bill?"));
-//   if (billPrice <= 50) {
-//     tip = billPrice * 0.2;
-//     console.log(tip, billPrice + tip);
-//   } else if (billPrice > 50 && billPrice <= 200) {
-//     tip = billPrice * 0.15;
-//     console.log(tip, billPrice + tip);
-//   } else {
-//     tip = billPrice * 0.1;
-//     console.log(tip, billPrice + tip);
-//   }
-// }
+function calculateTip() {
+  let tip = 0;
+  let billPrice = Number(prompt("What is the bill?"));
+  if (billPrice <= 50) {
+    tip = billPrice * 0.2;
+    console.log(tip, billPrice + tip);
+  } else if (billPrice > 50 && billPrice <= 200) {
+    tip = billPrice * 0.15;
+    console.log(tip, billPrice + tip);
+  } else {
+    tip = billPrice * 0.1;
+    console.log(tip, billPrice + tip);
+  }
+}
 
-// calculateTip();
+calculateTip();
 
 // Exercise 3 : Find The Numbers Divisible By 23
 // Instructions
